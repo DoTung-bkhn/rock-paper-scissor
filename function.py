@@ -49,7 +49,7 @@ def save_model(model):
 #predict
 def predict(model,input):
     pos=[]
-    output=model.predict(input,batch_size=len(input))
+    output=model.predict(input)
     for i in range(len(output)):
         max_val=max(output[i])
         for i,j in enumerate(output[i]):
